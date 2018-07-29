@@ -1,0 +1,45 @@
+.ph{
+
+  background-color: aliceblue;
+  margin:0.2em;
+}
+.ph-focus{
+  transition-duration: 1s;
+  background-color: aquamarine
+}
+.ph-change{
+  transition-duration: 0s;
+  background-color: dodgerblue
+}
+input{
+  width: 50em;
+  max-width: 90vw;
+  padding-top: 0.2em;
+  padding-top: 0.2em;
+}
+.square_btn {
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #eee;
+  background-color: #00aced;
+  border-radius: 3px;
+  transition: .4s;
+  margin-top: 1em;
+}
+
+.square_btn:hover {
+  background: #67c5ff;
+  color: white;
+}
+
+#generatedText{
+  border: 1px solid black;
+  margin-top: 0.5em;
+  margin-bottom:0.5em;
+  max-width: 40em;
+}
+#cr {
+  display: inline-block;
+  margin-top: 4em;
+}
