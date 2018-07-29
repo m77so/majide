@@ -1,3 +1,11 @@
+const $generatedText = document.getElementById("generatedText")
+const updateLink = ()=>{
+  let text = $generatedText.innerText
+  document.getElementById("tweet-generated-text").setAttribute("href","https://twitter.com/intent/tweet?text="+encodeURIComponent(text))
+}
+
+updateLink()
+
 for(let inputDom of document.getElementsByTagName("input")){
   inputDom.addEventListener("input",(ev)=>{
     let v = ev.target.value
@@ -7,6 +15,7 @@ for(let inputDom of document.getElementsByTagName("input")){
       phDom.classList.add("ph-change")
       setTimeout(()=>{phDom.classList.remove("ph-change")},200)
     }
+    updateLink()
   })
   inputDom.addEventListener("focus",(ev)=>{
 
@@ -23,14 +32,6 @@ for(let inputDom of document.getElementsByTagName("input")){
   })
 
 }
-
-const $generatedText = document.getElementById("generatedText")
-const updateLink = ()=>{
-  let text = $generatedText.innerText
-  $generatedText.setAttribute("href","https://twitter.com/intent/tweet?text="+encodeURIComponent(text))
-}
-$generatedText.addEventListener("change",updateLink)
-updateLink()
 
 // http://konyu.hatenablog.com/entry/2015/04/05/235432
 function selectDomElm(obj){
